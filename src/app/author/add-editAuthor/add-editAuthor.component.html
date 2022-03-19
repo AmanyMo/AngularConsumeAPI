@@ -1,0 +1,43 @@
+
+<div class="form-group row">
+  <label for="ID" disabled class="col-sm-2 col-form-label" aria-disabled="true">Author ID</label>
+    <div class="col-sm-10">
+      <input type="text"   class="form-control"  [(ngModel)] ="ID"
+        id="id" readonly placeholder="ID">
+    </div>
+
+    <label for="Title" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  [(ngModel)] ="Name"
+        id="name" placeholder="enter the name">
+    </div>
+
+    <label for="DateOfPublication" class="col-sm-2 col-form-label">date of Birth</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" [(ngModel)] ="DOB"
+        id="dateofbirth" placeholder="enter the date of Birth">
+    </div>
+
+    <label for="Cover" class="col-sm-2 col-form-label">Image</label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control"  [(ngModel)] ="Image"
+        id="image" placeholder="enter image name">
+    </div>
+
+    <label for="Description" class="col-sm-2 col-form-label">Bio</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  [(ngModel)] ="Bio"
+        id="bio" placeholder="enter the Bio">
+    </div>
+    <div class="form-group">
+    <button  class="btn btn-primary" (click)="addAuthor()" *ngIf="author.ID==0">
+      Add</button>
+
+  <button class="btn btn-primary" (click)="updateAuthor(author.ID)" *ngIf="author.ID!=0">
+    Update</button>
+  </div>
+  </div>
+
+  
+
+
